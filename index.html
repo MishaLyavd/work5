@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Мои магазины</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="container-fluid page">
+        <header class="row header">
+            <div class="col offset-lg-3 offset-md-4">
+                <a href="#" class="_link menu-button" id="menuButton"></a>
+                <div class="header__content">
+                    <div class="header__crumbs">
+                        <div>Главная</div>
+                        <div class="arrow"></div>
+                        <div>Мои магазины</div>
+                    </div>
+                    <div class="header-buttons">
+                        <a href="#" class="_link message"></a>
+                        <a href="#" class="_link profile">
+                            <div class="header-buttons__avatar"></div>
+                            <div class="header-buttons__name">
+                                Максим Добжанский
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="row">
+                <div class="col offset-lg-3 offset-md-4">
+                    <button class="add-button _button _button_primary">
+                        <div class="button-icon button-icon_add"></div>
+                        <div class="button-text" id="create">Создать свой магазин</div>
+                    </button>
+                </div>
+            </div>
+            <div class="row popup">
+                <div class="col-11 col-md-7 offset-lg-3 offset-md-4 popup-container" id="popup">
+                    <div class="exit" id="exit"></div>
+                    <div class="popup__title">Создать магазин</div>
+                    <form class="form">
+                        <div class="form__row">
+                            <label class="form__label form__label_half">
+                                Шаблон
+                                <select class="form__select" name="template">
+                                    <option value="standart">Стандартный</option>
+                                </select>
+                            </label>
+                            <label class="form__label form__label_half">
+                                Цветовая cхема
+                                <select class="form__select" name="template">
+                                    <option value="classic">Классическая </option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <label class="form__label">
+                                Домен
+                                <div class="label__row">
+                                    <input type="text" name="domain" class="form__input" placeholder="Например: ivangrozniy">
+                                    <button class="domain _button _button_info">.work5.ru</button>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form__row">
+                            <div class="form__info-logo"></div>
+                            <div class="form__info-text">
+                                В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы сможете прикрутить свой домен (например ivangrozniy.ru). Подробнее по <span class="link">ссылке</span>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form__row justify-content-start">
+                        <button class="_button _button_default" id="cancel">Отмена</button>
+                        <button class="_button _button_primary" id="submit">Создать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col offset-lg-3 offset-md-4">
+                    <div class="title">
+                        Управление магазинами
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-8 offset-lg-3 offset-md-4">
+                    <div class="table-responsive store-management">
+                        <table class="table">
+                            <tr>
+                                <th class="store-management__head">№</th>
+                                <th class="store-management__head">Название</th>
+                                <th class="store-management__head">Адрес</th>
+                                <th class="store-management__head">Действие</th>
+                            </tr>
+                            <tr>
+                                <td class="store-management__cell _border-bottom">12345</td>
+                                <td class="store-management__cell _border-bottom">Дипломная работа</td>
+                                <td class="store-management__cell _border-bottom">http://www.work5.ru/services</td>
+                                <td class="store-management__cell buttons-cell _border-bottom">
+                                    <button class="_button _button_primary">
+                                        <div class="button-icon button-icon_edit"></div>
+                                        <div class="button-text">Редактировать</div>
+                                    </button>
+                                    <button class="_button _button_default">
+                                        <div class="button-icon button-icon_cancel"></div>
+                                        <div class="button-text">Редактировать</div>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="store-management__cell">12345</td>
+                                <td class="store-management__cell">Дипломная работа</td>
+                                <td class="store-management__cell">http://www.work5.ru/services</td>
+                                <td class="store-management__cell buttons-cell">
+                                    <button class="_button _button_primary">
+                                        <div class="button-icon button-icon_edit"></div>
+                                        <div class="button-text">Редактировать</div>
+                                    </button>
+                                    <button class="_button _button_default">
+                                        <div class="button-icon button-icon_cancel"></div>
+                                        <div class="button-text">Редактировать</div>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <nav class="navigation" id="menu">
+            <a href="#" class="navigation__logo"></a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_home"></div>
+                <div class="navigation__text">Главная</div>
+            </a>
+            <a href="#" class="navigation__button _nav-active _link">
+                <div class="navigation__icon nav_cart"></div>
+                <div class="navigation__text">Мои магазины</div>
+            </a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_megaphone"></div>
+                <div class="navigation__text">Промоматериалы</div>
+            </a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_pie"></div>
+                <div class="navigation__text">Статистика</div>
+            </a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_wallet"></div>
+                <div class="navigation__text">Баланс</div>
+            </a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_profile"></div>
+                <div class="navigation__text">Персональные данные</div>
+            </a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_information"></div>
+                <div class="navigation__text">FAQ</div>
+            </a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_music"></div>
+                <div class="navigation__text">Техподдержка</div>
+            </a>
+            <a href="#" class="navigation__button _link">
+                <div class="navigation__icon nav_logout"></div>
+                <div class="navigation__text">Выход</div>
+            </a>
+        </nav>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
